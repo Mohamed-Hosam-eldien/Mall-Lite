@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageFoodCart"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/check_list2"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/imageDeleteItem"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/background_text4"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_baseline_close_24"
+                    tools:ignore="ContentDescription" />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="3"
+            android:gravity="right"
+            android:orientation="vertical"
+            android:padding="6dp"
+            tools:ignore="RtlHardcoded">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/foodNameCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="كاندي اسباني"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/font_project2"
+                    android:textColor="@color/blue" />
+
+                <LinearLayout
+                    android:id="@+id/layoutAddon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txtFoodAddonWithPriceCart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:fontFamily="@font/font_project2"
+                        android:textColor="@color/black"
+                        />
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerAddonImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtMinus"
+                            android:layout_width="24sp"
+                            android:layout_height="24sp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/background_button_cart"
+                            android:gravity="center"
+                            android:text="@string/minusMark"
+                            android:textColor="@color/overlay_black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtQuantityCart"
+                            android:layout_width="60dp"
+                            android:layout_height="30sp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:background="@drawable/background_text5"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+
+                        <TextView
+                            android:id="@+id/txtPlus"
+                            android:layout_width="24sp"
+                            android:layout_height="24sp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/background_button_cart"
+                            android:gravity="center"
+                            android:text="@string/plusMark"
+                            android:textColor="@color/overlay_black"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtTotalCart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/font_project2"
+                        android:layout_toRightOf="@id/txt"
+                        android:textSize="16sp"
+                        tools:ignore="RelativeOverlap" />
+
+                    <TextView
+                        android:id="@+id/txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:fontFamily="@font/font_project2"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dp"
+                        android:text="@string/g.m" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:layout_marginRight="2dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layoutDeposit"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:text="@string/g.m"
+                            android:layout_marginRight="6dp"
+                            android:fontFamily="@font/font_project2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+
+                        <TextView
+                            android:id="@+id/txtDeposit"
+                            android:layout_marginRight="2dp"
+                            android:fontFamily="@font/font_project2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+
+                        <TextView
+                            android:text="@string/deposit_payment"
+                            android:fontFamily="@font/font_project2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtDeliverTime"
+                        android:fontFamily="@font/font_project2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8sp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorAccent">#1F94EF</color> //64B4F4
+    <color name="colorPrimary">#AD1457</color>
+    <color name="colorPrimaryDark">#1F94EF</color>
+    <color name="colorPrimarylow">#F589B8</color>
+
+
+    <color name="green">#609C1B</color>
+    <color name="lightMoov">#9F1FD2</color>
+    <color name="darkGreen">#4C8905</color>
+    <color name="moov">#6230BB</color>
+    <color name="darkMoov">#4A2095</color>
+    <color name="blueDark">#0065B5</color>
+    <color name="blue">#0C7BD3</color>
+    <color name="red">#DE0505</color>
+    <color name="yellow">#FFC107</color>
+    <color name="darkYellow">#C8FFC107</color>
+    <color name="orange">#FF5722</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#989797</color>
+    <color name="kohly">#0C1F4F</color>
+
+    <color name="low_blue">#D3ECFF</color>
+    <color name="low_green">#CEE7B1</color>
+    <color name="low_red">#F5D7D7</color>
+    <color name="low_yellow">#F1ECBB</color>
+    <color name="low_moov">#CDBDEA</color>
+    <color name="low_gray">#E6E6E6</color>
+
+    <color name="focus_green">#BDE095</color>
+    <color name="focus_red">#E09595</color>
+
+    <color name="bage">#fff0db</color>
+    <color name="overlay_black">#88000000</color>
+    <color name="overLayBackground2">#AD000000</color>
+    <color name="shimmer">#dddddd</color>
+
+    <array name="dot_colors">
+        <item>#03A9F4</item>
+        <item>#B70442</item>
+        <item>#4AB711</item>
+    </array>
+
+</resources>

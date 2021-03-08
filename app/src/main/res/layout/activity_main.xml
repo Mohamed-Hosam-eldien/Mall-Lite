@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/assd"
+        android:rotation="-18"
+        android:contentDescription="@null" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginBottom="70dp"
+        android:src="@drawable/logo_text2"
+        android:contentDescription="@null" />
+
+    <ProgressBar
+        android:id="@+id/waitingProg"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/progress_back"
+        android:visibility="gone"
+        android:padding="8dp"/>
+
+
+    <com.ornach.nobobutton.NoboButton
+        android:id="@+id/btnSignIn"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        app:nb_text="تسجيل دخول"
+        android:visibility="gone"
+        app:nb_backgroundColor="@color/white"
+        app:nb_textSize="16dp"
+        android:padding="12dp"
+        app:nb_textColor="@color/blueDark"
+        app:nb_focusColor="@color/low_gray"
+        app:nb_textStyle="bold"
+        app:nb_radius="8dp"
+        android:layout_marginTop="65dp"
+        />
+
+</LinearLayout>

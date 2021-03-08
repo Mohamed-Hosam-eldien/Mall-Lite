@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr"
+    tools:ignore="RtlHardcoded"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:minWidth="320dp"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
+        android:background="@drawable/bottom_background"
+        android:orientation="vertical">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/addressName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="32dp"
+            android:layout_marginLeft="32sp"
+            android:gravity="center"
+            android:enabled="false"
+            android:visibility="gone"
+            android:textColor="#3F51B5"
+            android:textSize="16sp"
+            app:met_floatingLabel="highlight"
+            app:met_primaryColor="#3F51B5"
+            app:met_underlineColor="#3F51B5" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8sp"
+            android:layout_marginBottom="20dp"
+            android:gravity="right"
+            android:orientation="horizontal"
+            >
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/name_build"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:hint="@string/build_name"
+                android:textColor="@color/kohly"
+                android:textSize="16sp"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/kohly"
+                app:met_underlineColor="@color/kohly" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/num_build"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:hint="@string/build_num"
+                android:inputType="number"
+                android:textColor="@color/kohly"
+                android:textSize="16sp"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/kohly"
+                app:met_underlineColor="@color/kohly" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8sp"
+            android:layout_marginBottom="20dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/name_street"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                app:met_helperTextColor="@color/yellow"
+                android:gravity="right"
+                android:hint="@string/street_name"
+                android:textColor="@color/kohly"
+                android:textSize="16sp"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/kohly"
+                app:met_underlineColor="@color/kohly" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8sp"
+            android:layout_marginBottom="20dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/flat_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:inputType="number"
+                android:hint="@string/floor2"
+                android:textColor="@color/kohly"
+                android:textSize="16sp"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/kohly"
+                app:met_underlineColor="@color/kohly" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/floor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:hint="@string/flatNum"
+                android:inputType="number"
+                android:textColor="@color/kohly"
+                android:textSize="16sp"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@color/kohly"
+                app:met_underlineColor="@color/kohly" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8sp"
+            android:layout_marginBottom="20dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/area"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:dropDownWidth="match_parent"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:popupBackground="#FFFFFF"
+                style="@style/spinner_style2"
+                android:requiresFadingEdge="horizontal|vertical"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="4dp"
+                android:fontFamily="@font/font_project"
+                android:text="@string/choose_mini_city"
+                android:textColor="#000"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="8sp"
+            android:gravity="right"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+
+            <EditText
+                android:id="@+id/address_information"
+                android:layout_width="match_parent"
+                android:layout_height="80sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/border_layout2"
+                android:gravity="right|top"
+                android:hint="@string/detailsFor_address"
+                android:padding="8dp"
+                android:textSize="16sp"
+                tools:ignore="Autofill,InefficientWeight,TextFields" />
+
+
+            <com.ornach.nobobutton.NoboButton
+                android:id="@+id/btn_Ok"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="25sp"
+                android:layout_marginRight="30dp"
+                app:nb_text="@string/ok"
+                app:nb_textSize="16dp"
+                app:nb_backgroundColor="@color/kohly"
+                app:nb_focusColor="#172467"
+                app:nb_textColor="@color/white"
+                app:nb_radius="8dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bottom_background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/font_project2"
+            android:layout_marginEnd="8dp"
+            android:text="@string/pound"
+            android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txt_food_total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/font_project2"
+                android:text="@string/_0_00"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <com.ornach.nobobutton.NoboButton
+                android:id="@+id/btn_minus"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                app:nb_backgroundColor="@color/blue"
+                app:nb_focusColor="@color/blueDark"
+                app:nb_radius="15dp"
+                app:nb_text="-"
+                app:nb_textColor="@color/white"
+                app:nb_textSize="18dp"
+                app:nb_textStyle="bold" />
+
+            <View
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/background_text5" />
+
+            <TextView
+                android:id="@+id/txt_food_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="18sp"
+                tools:ignore="RelativeOverlap" />
+
+
+            <com.ornach.nobobutton.NoboButton
+                android:id="@+id/btn_plus"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:nb_backgroundColor="@color/blue"
+                app:nb_focusColor="@color/blueDark"
+                app:nb_radius="15dp"
+                app:nb_text="+"
+                app:nb_textColor="@color/white"
+                app:nb_textSize="18dp"
+                app:nb_textStyle="bold" />
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_choose_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4sp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_food_addon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="16dp"
+                app:selectionRequired="true"
+                app:singleSelection="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/font_project2"
+                android:text="@string/choose_category"
+                tools:ignore="RtlHardcoded" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_choose_kind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4sp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_image_addon"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/txt_choose_kind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/font_project2"
+                android:text="@string/choose_kind"
+                tools:ignore="RtlHardcoded" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/addon_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            />
+
+            <TextView
+                android:id="@+id/txt_delivery_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16sp"
+                android:fontFamily="@font/font_project2"
+                android:layout_gravity="right"
+                android:gravity="right"
+                tools:ignore="RtlHardcoded" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+                    android:id="@+id/txt_cash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font_project2"
+                    android:layout_marginLeft="32dp"
+                     />
+
+                <TextView
+                    android:id="@+id/txt_red_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:visibility="gone"
+                    android:text="@string/red_line"
+                    android:textColor="@color/red"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+        <com.ornach.nobobutton.NoboButton
+            android:id="@+id/btn_add_to_cart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16sp"
+            app:nb_backgroundColor="@color/colorPrimaryDark"
+            app:nb_drawableResource="@drawable/ic_baseline_add_shopping_cart_24"
+            app:nb_enabled="false"
+            app:nb_focusColor="@color/blueDark"
+            app:nb_radius="15dp"
+            app:nb_text="أضف إلى السلة   "
+            app:nb_textColor="@color/white"
+            app:nb_textSize="18dp"
+            app:nb_textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>

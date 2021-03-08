@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="@drawable/background_noties_dialog"
+    android:layout_width="240dp"
+    android:minWidth="240dp"
+    android:padding="8dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/dialog_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:fontFamily="@font/font_project"
+        android:textColor="@color/colorPrimaryDark"/>
+
+
+    <TextView
+        android:id="@+id/dialog_Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="45dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <com.ornach.nobobutton.NoboButton
+            android:id="@+id/dialogAccept"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:nb_backgroundColor="@color/blue"
+            app:nb_focusColor="@color/blueDark"
+            android:background="@drawable/background_noties_dialog"
+            app:nb_text="موافق"
+            app:nb_radius="8dp"
+            app:nb_textSize="14sp"
+            app:nb_textColor="@color/white"
+            app:nb_textStyle="bold"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

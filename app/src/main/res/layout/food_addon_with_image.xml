@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="28dp"
+    android:layout_height="28dp"
+    android:layout_marginRight="4sp"
+    android:layout_marginLeft="4sp"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_text6"
+            tools:ignore="UselessParent">
+
+            <ImageView
+                android:id="@+id/image_food_addon"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+
+</LinearLayout>

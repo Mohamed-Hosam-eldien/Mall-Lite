@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    tools:ignore="ContentDescription">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/toolbar_background2" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="@font/font_project"
+                android:text="@string/contact_us"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="16dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingBottom="4dp"
+                        android:fontFamily="@font/font_project"
+                        android:gravity="center"
+                        android:background="@drawable/background_text"
+                        android:text="@string/contact_use_with"
+                        android:textColor="@color/blue"
+                        android:textSize="18sp" />
+
+                    <ImageButton
+                        android:id="@+id/imgCallPhone"
+                        android:layout_width="180dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/call_press"
+                        android:scaleType="fitCenter" />
+
+                    <ImageButton
+                        android:id="@+id/imgLiveChat"
+                        android:layout_width="180dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="right"
+                        android:background="@drawable/chat_press"
+                        android:scaleType="fitCenter" />
+
+
+                    <ImageButton
+                        android:id="@+id/imgWhatsApp"
+                        android:layout_width="180dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="left"
+                        android:background="@drawable/whats_app_press"
+                        android:scaleType="fitCenter" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/font_project"
+                        android:gravity="center"
+                        android:paddingRight="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingBottom="4dp"
+                        android:background="@drawable/background_text"
+                        android:text="@string/follow_use"
+                        android:textColor="@color/blue"
+                        android:textSize="18sp" />
+
+                    <ImageButton
+                        android:id="@+id/imgFacebook"
+                        android:layout_width="180dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="20sp"
+                        android:background="@drawable/facebook_press"
+                        android:cropToPadding="false"
+                        android:scaleType="fitCenter" />
+
+                    <ImageButton
+                        android:id="@+id/imgInstagram"
+                        android:layout_width="180dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="left"
+                        android:background="@drawable/insta_click"
+                        android:scaleType="fitCenter" />
+
+                    <ImageButton
+                        android:id="@+id/imgYoutube"
+                        android:layout_width="180dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="right"
+                        android:background="@drawable/tube_press"
+                        android:scaleType="fitCenter" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

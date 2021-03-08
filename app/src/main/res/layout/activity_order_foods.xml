@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/txtOrderNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4sp"
+            android:fontFamily="@font/font_project2"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginRight="4sp"
+            android:gravity="center"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/txtAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:fontFamily="@font/font_project2"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginRight="4sp"
+            android:layout_marginTop="6dp"
+            android:gravity="right"
+            tools:ignore="RtlHardcoded" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayoutOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabBackground="@drawable/selector"
+            app:tabIndicatorColor="@color/blueDark"
+            app:tabTextColor="@color/blueDark"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="8sp"
+            android:layout_marginRight="2dp" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPagerOrder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4sp"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

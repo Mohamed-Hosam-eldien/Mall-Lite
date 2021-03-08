@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/mainLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical"
+    tools:ignore="RtlHardcoded,RtlSymmetry">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+
+        <TextView
+            android:id="@+id/txtMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_project"
+            android:layout_centerInParent="true"
+            android:text="الصفحة الشخصية"
+            android:textSize="18sp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black"
+            tools:ignore="RtlHardcoded" />
+
+        <ImageView
+            android:id="@+id/imgMore"
+            android:src="@drawable/ic_like_color_24"
+            android:layout_alignParentRight="true"
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:contentDescription="@null" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

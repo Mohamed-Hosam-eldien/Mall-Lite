@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/low_gray"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_background"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp">
+
+            <TextView
+                android:id="@+id/txt_category_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/font_project"
+                android:text="@string/submitOrder"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:background="@color/low_gray"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnSend"
+        android:layout_below="@id/appBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="@drawable/background_text5"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="8dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="32sp"
+                            android:layout_toRightOf="@id/spinnerHeaderAddress"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true">
+
+                            <View
+                                android:id="@+id/btnAddAddress"
+                                android:layout_width="140dp"
+                                android:layout_height="40sp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/background_add_address"
+                                tools:ignore="RelativeOverlap"/>
+
+
+                            <TextView
+                                android:id="@+id/text00"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add_new_add"
+                                android:textColor="@color/white"
+                                android:layout_marginRight="10dp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/font_project2"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toLeftOf="@id/text00"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="4dp"
+                                android:src="@drawable/ic_baseline_add_24"
+                                android:contentDescription="@null" />
+
+
+
+                        </RelativeLayout>
+
+                        <Spinner
+                            android:id="@+id/spinnerHeaderAddress"
+                            style="@style/spinner_style"
+                            android:layout_width="150dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#000000" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/border_layout"
+                        android:layoutDirection="rtl"
+                        android:orientation="vertical"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0sp"
+                        tools:ignore="RtlHardcoded">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:gravity="right"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtAddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:textDirection="rtl"
+                                android:textAlignment="textStart"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="@font/font_project2"
+                                android:gravity="right"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/txtDetails"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:textDirection="rtl"
+                                android:textAlignment="textStart"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="@font/font_project2"
+                                android:gravity="right"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/txtNotFound"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/font_project2"
+                                android:text="@string/not_address_in_your_menu"
+                                android:textSize="16sp"
+                                tools:ignore="TooDeepLayout" />
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTomorrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"
+                app:cardCornerRadius="8dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/font_project2"
+                            android:text="@string/productTomorrow"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            tools:ignore="RtlHardcoded" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#000000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8sp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="10sp"
+                        android:background="@drawable/background_checkout"
+                        android:orientation="vertical"
+                        android:paddingEnd="3dp"
+                        android:paddingBottom="2dp"
+                        tools:ignore="RtlSymmetry">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginEnd="4dp"
+                                    android:fontFamily="@font/font_project2"
+                                    android:text="@string/total_pay"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="RelativeOverlap" />
+
+                                <TextView
+                                    android:id="@+id/txt1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:fontFamily="@font/font_project2"
+                                    android:gravity="right"
+                                    android:text="@string/g.m"
+                                    android:textColor="#000000"
+                                    tools:ignore="RtlHardcoded" />
+
+                                <TextView
+                                    android:id="@+id/totalPaymentTomorrow"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_toRightOf="@id/txt1"
+                                    android:fontFamily="@font/font_project2"
+                                    android:gravity="right"
+                                    android:text="@string/_0_00"
+                                    android:textColor="#000000"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="RtlHardcoded" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginEnd="4dp"
+                                    android:fontFamily="@font/font_project2"
+                                    android:text="@string/delivery_price"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="RelativeOverlap" />
+
+                                <TextView
+                                    android:id="@+id/txt2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:fontFamily="@font/font_project2"
+                                    android:gravity="right"
+                                    android:text="@string/g.m"
+                                    android:textColor="#000000"
+                                    android:visibility="gone"
+                                    tools:ignore="RtlHardcoded" />
+
+                                <TextView
+                                    android:id="@+id/deleverySalaryTomorrow"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_toRightOf="@id/txt2"
+                                    android:fontFamily="@font/font_project2"
+                                    android:gravity="right"
+                                    android:text="@string/_0_00"
+                                    android:textColor="#000000"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:visibility="gone"
+                                    tools:ignore="RtlHardcoded" />
+
+                                <TextView
+                                    android:id="@+id/textNotFoundAddress"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8sp"
+                                    android:layout_toRightOf="@id/progBarDeleveryTomorrow"
+                                    android:text="@string/not_found_add"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+
+
+                                <ProgressBar
+                                    android:id="@+id/progBarDeleveryTomorrow"
+                                    android:layout_width="18sp"
+                                    android:layout_height="18sp"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_marginStart="12dp" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="5sp"
+                                android:layout_marginBottom="5sp"
+                                android:background="#1F94EF" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginEnd="4dp"
+                                    android:fontFamily="@font/font_project2"
+                                    android:text="@string/total"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="RelativeOverlap" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:background="#1F94EF"
+                                    android:layout_centerVertical="true"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/txt3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/font_project2"
+                                        android:gravity="right"
+                                        android:layout_gravity="center"
+                                        android:paddingLeft="8dp"
+                                        android:text="@string/g.m"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="16sp"
+                                        tools:ignore="RtlHardcoded" />
+
+                                    <TextView
+                                        android:id="@+id/totalAllTomorrow"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/font_project2"
+                                        android:gravity="right"
+                                        android:paddingTop="4dp"
+                                        android:paddingLeft="8dp"
+                                        android:paddingRight="8dp"
+                                        android:text="@string/_0_00"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        tools:ignore="RtlHardcoded" />
+
+
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layoutCachOnTomorrow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
+                                android:paddingTop="2dp"
+                                android:fontFamily="@font/font_project2"
+                                android:text="@string/cash_on_delivery"
+                                android:textColor="@color/white"
+                                tools:ignore="RelativeOverlap" />
+
+                            <net.igenius.customcheckbox.CustomCheckBox
+                                android:id="@+id/checkByCashTomorrow"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentStart="true"
+                                android:clickable="false"
+                                app:color_checked="#8FE32F"
+                                app:duration="200"
+                                app:stroke_width="1dp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"
+                app:cardCornerRadius="8dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/font_project2"
+                            android:text="@string/productAfterSomeDays"
+                            android:textColor="#000"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            tools:ignore="RtlHardcoded" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="#000000" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8sp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="10sp"
+                        android:background="@drawable/background_checkout2"
+                        android:orientation="vertical"
+                        android:paddingEnd="3dp"
+                        android:paddingBottom="2dp"
+                        tools:ignore="RtlSymmetry">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#fff"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginEnd="4dp"
+                                    android:fontFamily="@font/font_project2"
+                                    android:text="@string/total_pay"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="RelativeOverlap" />
+
+                                <TextView
+                                    android:id="@+id/txt4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_marginStart="4dp"
+                                    android:fontFamily="@font/font_project2"
+                                    android:gravity="right"
+                                    android:text="@string/g.m"
+                                    android:textColor="#000000"
+                                    tools:ignore="RtlHardcoded" />
+
+
+                                <TextView
+                                    android:id="@+id/totalPaymentDays"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_toRightOf="@id/txt4"
+                                    android:fontFamily="@font/font_project2"
+                                    android:gravity="right"
+                                    android:text="@string/_0_00"
+                                    android:textColor="#000000"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="RtlHardcoded" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginEnd="4dp"
+                                    android:fontFamily="@font/font_project2"
+                                    android:text="@string/delivery_price"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="RelativeOverlap" />
+
+                                <TextView
+                                    android:id="@+id/deleverySalaryDays"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_toRightOf="@id/txt5"
+                                    android:fontFamily="@font/font_project2"
+                                    android:gravity="right"
+                                    android:text="@string/_0_00"
+                                    android:textColor="#000000"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:visibility="gone"
+                                    tools:ignore="RtlHardcoded" />
+
+                                <TextView
+                                    android:id="@+id/txt5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_marginStart="4dp"
+                                    android:fontFamily="@font/font_project2"
+                                    android:gravity="right"
+                                    android:text="@string/g.m"
+                                    android:textColor="#000000"
+                                    android:visibility="gone"
+                                    tools:ignore="RtlHardcoded" />
+
+                                <TextView
+                                    android:id="@+id/textNotFoundAddress2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8sp"
+                                    android:layout_toRightOf="@id/progBarDeleveryDays"
+                                    android:text="لا يوجد عنوان!"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+
+                                <ProgressBar
+                                    android:id="@+id/progBarDeleveryDays"
+                                    android:layout_width="18sp"
+                                    android:layout_height="18sp"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_marginStart="12dp" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="5sp"
+                                android:layout_marginBottom="5sp"
+                                android:background="#5B3799" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginEnd="4dp"
+                                    android:fontFamily="@font/font_project2"
+                                    android:text="@string/total"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="RelativeOverlap" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:background="#5B3799"
+                                    android:layout_centerVertical="true"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/txt6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/font_project2"
+                                        android:gravity="right"
+                                        android:paddingLeft="8dp"
+                                        android:layout_gravity="center"
+                                        android:text="@string/g.m"
+                                        android:textColor="#FFFFFF"
+                                        android:textSize="16sp"
+                                        tools:ignore="RtlHardcoded" />
+
+                                    <TextView
+                                        android:id="@+id/totalAllPaymentAfter10Days"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="right"
+                                        android:paddingLeft="4dp"
+                                        android:paddingRight="8dp"
+                                        android:text="@string/_0_00"
+                                        android:paddingTop="4dp"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/font_project2"
+                                        android:textSize="16sp"
+                                        android:textColor="#FFFFFF"
+                                        tools:ignore="RtlHardcoded" />
+
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layoutCachVodafonDays"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="4dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="28sp"
+                                android:fontFamily="@font/font_project2"
+                                android:gravity="right"
+                                android:text="@string/vodafonCash"
+                                android:textColor="@color/white"
+                                tools:ignore="RelativeOverlap" />
+
+                            <net.igenius.customcheckbox.CustomCheckBox
+                                android:id="@+id/checkByCashVodafonDays"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentStart="true"
+                                android:clickable="false"
+                                app:color_checked="#8FE32F"
+                                app:duration="200"
+                                app:stroke_width="1dp"
+                                tools:ignore="TooManyViews" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="8dp"
+                >
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/edtOrderComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/font_project2"
+                    android:gravity="right"
+                    android:textSize="16sp"
+                    android:hint="@string/commentOrder"
+                    android:textColor="#2196F3"
+                    app:met_floatingLabel="highlight"
+                    app:met_primaryColor="#2196F3"
+                    app:met_underlineColor="#2196F3"
+                    tools:ignore="RtlHardcoded" />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <com.ornach.nobobutton.NoboButton
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        app:nb_backgroundColor="#0C1F4F"
+        app:nb_enabled="false"
+        app:nb_focusColor="#132A63"
+        app:nb_gravity="center"
+        app:nb_text="إرسال"
+        app:nb_textSize="16dp"
+        app:nb_textColor="@color/white"
+        app:nb_textStyle="bold" />
+
+
+</RelativeLayout>
+
+
+

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "258140019440",
+    "firebase_url": "https://delivery-1651c.firebaseio.com",
+    "project_id": "delivery-1651c",
+    "storage_bucket": "delivery-1651c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258140019440:android:c220851fa332ac4bc0c035",
+        "android_client_info": {
+          "package_name": "mohamed.parko.hosam.deliveryshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258140019440-tkujh3mb4v7v1b0p1h7n6bnl0s5ig14q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7rH01wMAnKt-u5GRmJzznmZ2ARFdv9Nw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258140019440-tkujh3mb4v7v1b0p1h7n6bnl0s5ig14q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

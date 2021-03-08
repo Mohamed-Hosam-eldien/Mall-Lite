@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/img_addon"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true"
+        android:contentDescription="@null" />
+
+    <com.ornach.nobobutton.NoboButton
+        android:id="@+id/btn_add_toChip_addon"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        app:nb_text="اختيار"
+        app:nb_textStyle="bold"
+        app:nb_radius="12dp"
+        app:nb_textColor="@color/white"
+        app:nb_textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@id/img_addon"
+        app:nb_backgroundColor="@color/blueDark"
+        app:nb_focusColor="@color/blue"/>
+
+
+</RelativeLayout>
